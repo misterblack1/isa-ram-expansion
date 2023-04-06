@@ -45,8 +45,8 @@ Memory map would look like this:
 - C -> 768k-897k Unused
 - D -> 869-1024k Unused and System ROMs
 
-So to configure the card, you must configure the DIP switches to disable the ISA RAM card mapping into A, B, F and H. That way it does not overlap these parts of the system.
+So to configure the card, you must configure the DIP switches to disable the ISA RAM card mapping into lower A and B and upper B and D. That way it does not overlap these parts of the system.
 
-Set SW1, SW2, SW6, SW7 and SW8 to ON. The rest should be off. If you try to add UMB memory to upper bank C (768k to 897k) this will not work and cause a crash because you are already using lower bank C to expand from 256k to 320k.
+Set SW1, SW2, SW6, SW7 and SW8 to ON. The rest should be off. If you try to add UMB memory to upper bank C (768k to 897k) this will not work and cause a crash because you are already using lower bank C to expand from 256k to 320k. The only unused bank on this card would be B -- but you cannot use it for UMB because the 640k-768k range is typically used by the video card. (MDA, CDA, etc.)
 
 
